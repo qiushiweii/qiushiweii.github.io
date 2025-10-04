@@ -81,14 +81,14 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 25px; /* tighter spacing */
       gap: 40px;
     }
 
-    /* ✅ Align text with section start */
+    /* ✅ Align text with section titles */
     .intro-text {
       flex: 1;
-      margin-left: 5px;
+      margin-left: 35px; /* aligns with h2 title start */
     }
 
     .intro-text h1 {
@@ -99,7 +99,7 @@
     .intro-text h3 {
       font-size: 20px;
       font-style: italic;
-      margin: 0 0 12px 0;
+      margin: 0 0 10px 0;
       color: #333;
     }
 
@@ -130,15 +130,15 @@
       vertical-align: middle;
     }
 
-    /* ✅ Slightly shift portrait left */
+    /* ✅ Larger + shifted portrait */
     .portrait {
-      flex: 0 0 180px;
-      margin-left: -10px; /* shifted closer */
+      flex: 0 0 200px;
+      margin-left: -30px; /* shifted left */
     }
 
     .portrait img {
-      width: 180px;
-      height: 180px;
+      width: 210px;
+      height: 210px;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -149,8 +149,8 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 30px 35px;
-      margin-bottom: 35px;
+      padding: 25px 35px; /* tighter padding */
+      margin-bottom: 25px; /* less gap between sections */
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
@@ -160,15 +160,17 @@
       box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
     }
 
+    /* ✅ Section titles uppercase */
     h2 {
       border-bottom: 3px solid #4f9eed;
       padding-bottom: 4px;
       color: #222;
       background: none;
       border-radius: 0;
-      text-transform: capitalize; /* ✅ caption case titles */
+      text-transform: uppercase;
       font-size: 22px;
       margin-top: 0;
+      margin-bottom: 10px;
     }
 
     ul { margin-left: 20px; }
@@ -237,12 +239,12 @@
 
     <!-- Sections -->
     <div class="section-box">
-      <h2>About</h2>
+      <h2>ABOUT</h2>
       <p>I am a Ph.D. candidate in Computer Science at Colorado School of Mines (<b>Mines</b>), expecting to graduate in December 2025. My research focuses on <b>networks and blockchain</b>. I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a faculty position starting in <b>2026</b>.</p>
     </div>
 
     <div class="section-box">
-      <h2>Education</h2>
+      <h2>EDUCATION</h2>
       <ul>
         <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
         <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
@@ -252,7 +254,7 @@
     </div>
 
     <div class="section-box">
-      <h2>Highlighted Research Projects</h2>
+      <h2>HIGHLIGHTED RESEARCH PROJECTS</h2>
       <ul>
         <li><b>Designed an optimal virtual payment channel (VPC) construction protocol</b></li>
         <p><i>First author, published at 2024 IEEE INFOCOM</i></p>
@@ -262,7 +264,7 @@
     </div>
 
     <div class="section-box">
-      <h2>Professional Services</h2>
+      <h2>PROFESSIONAL SERVICES</h2>
       <ul>
         <li><b>Reviewer:</b> IEEE TIFS, IEEE INFOCOM, IEEE IoT-J, IEEE TNSE, IEEE TMC</li>
         <li><b>Organizer:</b> English Broadcast Station, Hubei University (2014–2015)</li>
@@ -271,7 +273,7 @@
     </div>
 
     <div class="section-box">
-      <h2>Honors and Awards</h2>
+      <h2>HONORS AND AWARDS</h2>
       <ul>
         <li><b>2018–present</b>: Colorado School of Mines Graduate Research/Teaching Assistantship</li>
         <li><b>2022, 2024</b>: INFOCOM Student Travel Grant</li>
