@@ -40,33 +40,34 @@
     .intro {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start; /* align text with top of image */
+      align-items: center;   /* instead of flex-start */
       margin-bottom: 30px;
     }
+    
     .intro-text {
       flex: 1;
-      padding-top: 5px; /* nudge text down for visual balance */
     }
-    .intro-text h1 {
-      font-size: 34px;
-      margin: 0 0 10px;
-    }
+    
     .intro-text h3 {
       font-size: 20px;
       font-style: italic;
       margin: 0;
       color: #333;
     }
+    
     .intro-text .links {
       font-size: 18px;
-      margin-top: 6px;
+      margin-top: 4px;       /* small consistent gap */
+      display: flex;
+      flex-wrap: wrap;       /* makes links adjust neatly */
+      gap: 10px;
     }
     .intro-text .links a {
-      margin: 0 8px;
       text-decoration: none;
       font-weight: bold;
       color: #1d6fd6;
     }
+
     .portrait {
       flex: 0 0 180px;
       display: flex;
