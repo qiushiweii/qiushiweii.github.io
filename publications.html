@@ -65,16 +65,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #b3d1f7;
-      padding: 8px;
-      border-radius: 5px;
+      padding: 8px 0;              /* remove background and box look */
+      border-bottom: 3px solid #4f9eed;  /* add bottom line */
+      margin-bottom: 15px;
+      background: none;
+      border-radius: 0;
     }
+
     .section-header h2 {
-        border-bottom: 3px solid #4f9eed;  /* same color tone as your buttons */
-        padding-bottom: 4px;
-        margin-bottom: 10px;
-        background: none; /* remove previous blue box */
-      }
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
 
     .sort-button {
       background: #4f9eed;
