@@ -40,16 +40,35 @@
       text-align: center;
     }
     h1 { margin-bottom: 10px; }
-    h2 {
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: #b3d1f7;
       padding: 8px;
       border-radius: 5px;
-      text-align: left;
+    }
+    .section-header h2 {
+      margin: 0;
+    }
+    .sort-button {
+      background: #4f9eed;
+      color: white;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .sort-button:hover {
+      background: #1d6fd6;
     }
     .pub-list {
       display: inline-block;
       text-align: left;
       max-width: 850px;
+      margin-top: 15px;
     }
     .pub-list ul {
       list-style-type: disc;
@@ -72,24 +91,6 @@
       height: 18px;
       margin-right: 6px;
     }
-    .sort-buttons {
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .sort-buttons button {
-      background: #4f9eed;
-      color: white;
-      padding: 8px 16px;
-      margin: 0 8px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .sort-buttons button:hover {
-      background: #1d6fd6;
-    }
     .full-pubs {
       margin-top: 40px;
       font-size: 18px;
@@ -110,11 +111,10 @@
 
   <div class="container">
     <h1>Qiushi Wei</h1>
-    <h2>Selected Publications</h2>
 
-    <div class="sort-buttons">
-      <button onclick="sortPubs('desc')">Sort by Year ↓</button>
-      <button onclick="sortPubs('asc')">Sort by Year ↑</button>
+    <div class="section-header">
+      <h2>Selected Publications</h2>
+      <button class="sort-button" onclick="toggleSort()">Sort by Year ↓</button>
     </div>
 
     <div class="pub-list">
@@ -169,24 +169,39 @@
       <p>See the full list on 
         <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">
           Google Scholar
-        </a>.
+        </a>
       </p>
     </div>
   </div>
 
   <script>
-    function sortPubs(order) {
+    let sortOrder = "desc"; // default
+
+    function toggleSort() {
       const list = document.getElementById("pubs");
       const items = Array.from(list.getElementsByTagName("li"));
 
       items.sort((a, b) => {
         const yearA = parseInt(a.getAttribute("data-year"));
         const yearB = parseInt(b.getAttribute("data-year"));
-        return order === "asc" ? yearA - yearB : yearB - yearA;
+        return sortOrder === "asc" ? yearA - yearB : yearB - yearA;
       });
 
       items.forEach(item => list.appendChild(item));
+
+      // Toggle button text
+      const btn = document.querySelector(".sort-button");
+      if (sortOrder === "asc") {
+        sortOrder = "desc";
+        btn.textContent = "Sort by Year ↓";
+      } else {
+        sortOrder = "asc";
+        btn.textContent = "Sort by Year ↑";
+      }
     }
+
+    // Run once at load for default (descending)
+    window.onload = () => toggleSort();
   </script>
 </body>
 </html>
