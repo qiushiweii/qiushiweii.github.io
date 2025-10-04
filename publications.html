@@ -15,6 +15,7 @@
       color: #000;
       transition: background 0.3s, color 0.3s;
     }
+
     .navbar {
       background: #f8f9fa;
       border-bottom: 2px solid #ddd;
@@ -55,23 +56,25 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1100px;   /* wider layout for consistency */
       margin: 0 auto;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
-    h1 { margin-bottom: 10px; }
+
+    h1 { margin-bottom: 20px; }
+
+    /* bottom line instead of blue box */
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 0;              /* remove background and box look */
-      border-bottom: 3px solid #4f9eed;  /* add bottom line */
+      padding: 8px 0;
+      border-bottom: 3px solid #4f9eed;
       margin-bottom: 15px;
       background: none;
       border-radius: 0;
     }
-
     .section-header h2 {
       margin: 0;
       padding: 0;
@@ -79,6 +82,21 @@
       text-transform: uppercase;
     }
 
+    /* publication box style like index */
+    .section-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px 35px;
+      margin-bottom: 35px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      text-align: left;
+    }
+    body.dark-mode .section-box {
+      background: #1e1e1e;
+      border-color: #333;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+    }
 
     .sort-button {
       background: #4f9eed;
@@ -93,12 +111,7 @@
     .sort-button:hover {
       background: #1d6fd6;
     }
-    .pub-list {
-      display: inline-block;
-      text-align: left;
-      max-width: 850px;
-      margin-top: 15px;
-    }
+
     .pub-list ul {
       list-style-type: disc;
       margin-left: 25px;
@@ -107,6 +120,7 @@
     .pub-list li {
       margin-bottom: 20px;
     }
+
     .pdf-link {
       display: inline-flex;
       align-items: center;
@@ -125,10 +139,7 @@
       color: #666;
       margin-left: 8px;
     }
-    .full-pubs {
-      margin-top: 40px;
-      font-size: 18px;
-    }
+
     .full-pubs a {
       color: #1d6fd6;
       font-weight: bold;
@@ -151,9 +162,6 @@
     body.dark-mode .navbar a:hover {
       background: #558ed2;
     }
-    body.dark-mode .section-header {
-      background: #333a46;
-    }
     body.dark-mode a,
     body.dark-mode .pdf-link {
       color: #64b5f6;
@@ -175,66 +183,68 @@
   <div class="container">
     <h1>Qiushi Wei</h1>
 
-    <div class="section-header">
-      <h2>Selected Publications</h2>
-      <button class="sort-button" onclick="toggleSort()">Sort by Year ↓</button>
+    <div class="section-box">
+      <div class="section-header">
+        <h2>Selected Publications</h2>
+        <button class="sort-button" onclick="toggleSort()">Sort by Year ↓</button>
+      </div>
+
+      <div class="pub-list">
+        <ul id="pubs">
+          <li data-year="2024">
+            <i><b>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</b></i>
+            <a class="pdf-link" href="Thor_INFOCOM2024.pdf" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+            </a>
+            <br>
+            <b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2024.
+          </li>
+          
+          <li data-year="2025">
+            <i><b>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</b></i>
+            <a class="pdf-link" href="BAR_ICC2025.pdf" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+            </a>
+            <br>
+            <b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE International Conference on Communications (<b>ICC</b>), 2025.
+          </li>
+          
+          <li data-year="2026">
+            <i><b>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</b></i>
+            <span class="status">(Under Review)</span>
+            <br>
+            <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2026.
+          </li>
+          
+          <li data-year="2026">
+            <i><b>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</b></i>
+            <span class="status">(Under Review)</span>
+            <br>
+            <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2026.
+          </li>
+          
+          <li data-year="2025">
+            <i><b>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</b></i>
+            <a class="pdf-link" href="SpaceBooking_ICDCS2025.pdf" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+            </a>
+            <br>
+            Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE International Conference on Distributed Computing Systems (<b>ICDCS</b>), 2025.
+          </li>
+          
+          <li data-year="2025">
+            <i><b>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</b></i>
+            <a class="pdf-link" href="RSSR_ICMLA2025.pdf" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+            </a>
+            <br>
+            Zhennan Shi, <b>Qiushi Wei</b>. IEEE International Conference on Machine Learning and Applications (<b>ICMLA</b>), 2025.
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="pub-list">
-      <ul id="pubs">
-        <li data-year="2024">
-          <i><b>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</b></i>
-          <a class="pdf-link" href="Thor_INFOCOM2024.pdf" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
-          </a>
-          <br>
-          <b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2024.
-        </li>
-        
-        <li data-year="2025">
-          <i><b>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</b></i>
-          <a class="pdf-link" href="BAR_ICC2025.pdf" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
-          </a>
-          <br>
-          <b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE International Conference on Communications (<b>ICC</b>), 2025.
-        </li>
-        
-        <li data-year="2026">
-          <i><b>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</b></i>
-          <span class="status">(Under Review)</span>
-          <br>
-          <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2026.
-        </li>
-        
-        <li data-year="2026">
-          <i><b>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</b></i>
-          <span class="status">(Under Review)</span>
-          <br>
-          <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE International Conference on Computer Communications (<b>INFOCOM</b>), 2026.
-        </li>
-        
-        <li data-year="2025">
-          <i><b>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</b></i>
-          <a class="pdf-link" href="SpaceBooking_ICDCS2025.pdf" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
-          </a>
-          <br>
-          Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE International Conference on Distributed Computing Systems (<b>ICDCS</b>), 2025.
-        </li>
-        
-        <li data-year="2025">
-          <i><b>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</b></i>
-          <a class="pdf-link" href="RSSR_ICMLA2025.pdf" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
-          </a>
-          <br>
-          Zhennan Shi, <b>Qiushi Wei</b>. IEEE International Conference on Machine Learning and Applications (<b>ICMLA</b>), 2025.
-        </li>
-      </ul>
-    </div>
-
-    <div class="full-pubs">
+    <div class="section-box">
       <div class="section-header">
         <h2>Full Publications</h2>
       </div>
@@ -245,6 +255,7 @@
         </a>
       </p>
     </div>
+  </div>
 
   <script>
     let sortOrder = "desc"; // default
@@ -261,7 +272,6 @@
 
       items.forEach(item => list.appendChild(item));
 
-      // Toggle button text
       const btn = document.querySelector(".sort-button");
       if (sortOrder === "asc") {
         sortOrder = "desc";
@@ -272,10 +282,9 @@
       }
     }
 
-    // Run once at load for default (descending)
     window.onload = () => toggleSort();
 
-    // 🌗 Dark Mode Script
+    // 🌗 Dark Mode
     const toggleButton = document.getElementById('theme-toggle');
     const body = document.body;
     if (localStorage.getItem('theme') === 'dark') {
