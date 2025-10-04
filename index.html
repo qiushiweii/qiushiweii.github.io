@@ -102,16 +102,14 @@
       border-radius: 8px;
     }
     h2 {
-      border-bottom: 3px solid #4f9eed; /* blue line under the text */
+      border-bottom: 3px solid #4f9eed;
       padding-bottom: 4px;
-      color: #222; /* keep title text dark */
-      background: none; /* remove blue box */
+      color: #222;
+      background: none;
       border-radius: 0;
     }
 
     ul { margin-left: 20px; }
-
-    /* ↓ Original spacing tweaks you had */
     li { margin-bottom: 2px; }
     li + p {
       margin-top: 2px;
@@ -162,6 +160,21 @@
     body.dark-mode .navbar a:hover {
       background: #558ed2;
     }
+
+    /* ✅ Section box styling */
+    .section-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    body.dark-mode .section-box {
+      background: #1e1e1e;
+      border-color: #333;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+    }
   </style>
 </head>
 <body>
@@ -170,7 +183,6 @@
     <a href="publications.html">Publications</a>
     <a href="teaching.html">Teaching</a>
     <a href="demo.html">Presentation Demo</a>   
-    <!-- 🌗 Theme Toggle Button -->
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
 
@@ -202,75 +214,82 @@
     </div>
 
     <!-- About Section -->
-    <h2>About</h2>
-    <p>
-      I am a Ph.D. candidate in Computer Science at Colorado School of Mines (<b>Mines</b>), expecting to graduate in December 2025. 
-      My research focuses on <b>networks and blockchain</b>. 
-      I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a faculty 
-      position starting in <b>2026</b>.
-    </p>
+    <div class="section-box">
+      <h2>About</h2>
+      <p>
+        I am a Ph.D. candidate in Computer Science at Colorado School of Mines (<b>Mines</b>), expecting to graduate in December 2025. 
+        My research focuses on <b>networks and blockchain</b>. 
+        I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a faculty 
+        position starting in <b>2026</b>.
+      </p>
+    </div>
 
     <!-- Education Section -->
-    <h2>Education</h2>
-    <ul>
-      <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
-      <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
-      <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
-      <li><b>B.S. in Chemistry (Education)</b>, Hubei University, 2011–2015</li>
-    </ul>
+    <div class="section-box">
+      <h2>Education</h2>
+      <ul>
+        <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
+        <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
+        <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
+        <li><b>B.S. in Chemistry (Education)</b>, Hubei University, 2011–2015</li>
+      </ul>
+    </div>
 
     <!-- Research -->
-    <h2>Highlighted Research Projects</h2>
-    <ul>
-      <li><b>Designed an optimal virtual payment channel (VPC) construction protocol</b></li>
-      <p><i>First author, published at 2024 IEEE INFOCOM</i></p>
-      <p>
-        Traditional payment channel networks (PCNs) rely on intermediaries to route payments between users without direct channels, which limits efficiency and scalability.
-        To overcome this issue, we developed <b>Thor</b>, a recursive VPC construction protocol that introduces the <b>Capacity-to-Number-of-Intermediaries Ratio (CNIR)</b>, a metric that considers both channel capacity and collateral usage.
-        By leveraging a game-theoretic optimization algorithm, <b>Thor</b> efficiently constructs VPC networks and significantly outperforms state-of-the-art methods in terms of both capacity and CNIR.
-      </p>
+    <div class="section-box">
+      <h2>Highlighted Research Projects</h2>
+      <ul>
+        <li><b>Designed an optimal virtual payment channel (VPC) construction protocol</b></li>
+        <p><i>First author, published at 2024 IEEE INFOCOM</i></p>
+        <p>
+          Traditional payment channel networks (PCNs) rely on intermediaries to route payments between users without direct channels, which limits efficiency and scalability.
+          To overcome this issue, we developed <b>Thor</b>, a recursive VPC construction protocol that introduces the <b>Capacity-to-Number-of-Intermediaries Ratio (CNIR)</b>, a metric that considers both channel capacity and collateral usage.
+          By leveraging a game-theoretic optimization algorithm, <b>Thor</b> efficiently constructs VPC networks and significantly outperforms state-of-the-art methods in terms of both capacity and CNIR.
+        </p>
 
-      <li><b>Designed an innovative rebalancing protocol for PCNs</b></li>
-      <p><i>First author, published at 2025 IEEE ICC</i></p>
-      <p>
-        PCNs improve blockchain scalability through off-chain transactions but suffer from balance depletion due to unidirectional payments.
-        We proposed a distributed balance-aware routing protocol, <b>BAR</b>, that achieves high throughput while accounting for channel balances.
-        By modifying the original HTLC to improve efficiency and adapt it to balance-aware routing, <b>BAR</b> guarantees transaction atomicity.
-        We used real banking transaction data to evaluate <b>BAR</b> and demonstrated that it achieves a nearly 100% success ratio and success volume, highlighting its effectiveness.
-      </p>
-    </ul> 
+        <li><b>Designed an innovative rebalancing protocol for PCNs</b></li>
+        <p><i>First author, published at 2025 IEEE ICC</i></p>
+        <p>
+          PCNs improve blockchain scalability through off-chain transactions but suffer from balance depletion due to unidirectional payments.
+          We proposed a distributed balance-aware routing protocol, <b>BAR</b>, that achieves high throughput while accounting for channel balances.
+          By modifying the original HTLC to improve efficiency and adapt it to balance-aware routing, <b>BAR</b> guarantees transaction atomicity.
+          We used real banking transaction data to evaluate <b>BAR</b> and demonstrated that it achieves a nearly 100% success ratio and success volume, highlighting its effectiveness.
+        </p>
+      </ul>
+    </div>
     
     <!-- Professional Services -->
-    <h2>Professional Services</h2>
-    <ul>
-      <li><b>Reviewer:</b> IEEE TIFS, IEEE INFOCOM, IEEE IoT-J, IEEE TNSE, IEEE TMC</li>
-      <li><b>Organizer:</b> English Broadcast Station, Hubei University (2014–2015)</li>
-      <li><b>Memberships:</b> IEEE, IEEE ComSoc Student Member, ACM Student Member</li>
-    </ul>
+    <div class="section-box">
+      <h2>Professional Services</h2>
+      <ul>
+        <li><b>Reviewer:</b> IEEE TIFS, IEEE INFOCOM, IEEE IoT-J, IEEE TNSE, IEEE TMC</li>
+        <li><b>Organizer:</b> English Broadcast Station, Hubei University (2014–2015)</li>
+        <li><b>Memberships:</b> IEEE, IEEE ComSoc Student Member, ACM Student Member</li>
+      </ul>
+    </div>
 
     <!-- Honors -->
-    <h2>Honors and Awards</h2>
-    <ul>
-      <li><b>2018–present</b>: Colorado School of Mines Graduate Research/Teaching Assistantship</li>
-      <li><b>2022, 2024</b>: INFOCOM Student Travel Grant</li>
-      <li><b>2022</b>: ICNP Student Travel Grant</li>
-      <li><b>2015–2018</b>: South China University of Technology Excellent Graduate Student Scholarship</li>
-      <li><b>2012</b>: Hubei University Excellent Student Scholarship</li>
-    </ul>
-
+    <div class="section-box">
+      <h2>Honors and Awards</h2>
+      <ul>
+        <li><b>2018–present</b>: Colorado School of Mines Graduate Research/Teaching Assistantship</li>
+        <li><b>2022, 2024</b>: INFOCOM Student Travel Grant</li>
+        <li><b>2022</b>: ICNP Student Travel Grant</li>
+        <li><b>2015–2018</b>: South China University of Technology Excellent Graduate Student Scholarship</li>
+        <li><b>2012</b>: Hubei University Excellent Student Scholarship</li>
+      </ul>
+    </div>
   </div>
 
   <script>
     const toggleButton = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Load saved theme
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark-mode');
       toggleButton.textContent = '☀️';
     }
 
-    // Toggle theme
     toggleButton.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
