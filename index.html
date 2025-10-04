@@ -2,20 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Qiushi Wei | Homepage</title>
+  <title>Qiushi Wei | Home</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; font-size: 18px; background: #fafafa; text-align: center; }
-    .container { max-width: 900px; margin: 0 auto; padding: 20px; text-align: left; }
-    .navbar { background: #f8f9fa; border-bottom: 2px solid #ddd; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-    .navbar a { background: #4f9eed; color: white; padding: 10px 18px; margin: 0 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background 0.3s; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      font-size: 18px;
+      background: #fafafa;
+    }
+    .navbar {
+      background: #f8f9fa;
+      border-bottom: 2px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      background: #4f9eed;
+      color: white;
+      padding: 10px 18px;
+      margin: 0 6px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
     .navbar a:hover { background: #1d6fd6; }
-    h1 { font-size: 34px; margin-bottom: 5px; }
-    .header { display: flex; justify-content: center; align-items: center; gap: 20px; }
-    .header img { width: 160px; border-radius: 8px; }
-    .links-below { margin: 12px 0 30px 0; text-align: center; }
-    .links-below a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #0366d6; font-size: 18px; }
-    h2 { background: #b3d1f7; padding: 8px; border-radius: 5px; }
-    ul { list-style-type: square; margin-left: 30px; }
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+    .intro-text {
+      flex: 1;
+      text-align: center;
+    }
+    .intro-text h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .intro-text .links {
+      margin-top: 8px;
+      font-size: 18px;
+    }
+    .intro-text .links a {
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1d6fd6;
+    }
+    .portrait {
+      flex: 0 0 200px;
+    }
+    .portrait img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    h2 {
+      background: #b3d1f7;
+      padding: 8px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -26,23 +86,32 @@
   </div>
 
   <div class="container">
-    <div class="header">
-      <h1>Qiushi Wei</h1>
-      <img src="portrait.jpg" alt="Qiushi Wei Portrait">
+    <!-- Intro section with name/links on left, portrait on right -->
+    <div class="intro">
+      <div class="intro-text">
+        <h1>Qiushi Wei</h1>
+        <div class="links">
+          <a href="QiushiCV_application.pdf" target="_blank">CV</a> |
+          <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+          <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
+          <a href="mailto:qiushiwei@mines.edu">Email</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="portrait.jpg" alt="Qiushi Wei Portrait">
+      </div>
     </div>
 
-    <div class="links-below">
-      <a href="QiushiCV_application.pdf">CV</a> |
-      <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-      <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
-      <a href="mailto:qiushiwei@mines.edu">Email</a>
-    </div>
-
+    <!-- About Section -->
     <h2>About</h2>
-    <p>I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
-    My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity. 
-    I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty position starting in 2026.</p>
+    <p>
+      I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
+      My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity. 
+      I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty 
+      position starting in 2026.
+    </p>
 
+    <!-- Education Section -->
     <h2>Education</h2>
     <ul>
       <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
@@ -51,13 +120,15 @@
       <li><b>B.S. in Chemistry</b>, Hubei University, 2011–2015</li>
     </ul>
 
+    <!-- Research -->
     <h2>Research Experiences</h2>
     <ul>
-      <li><b>Blockchain Sharding Protocols</b>: Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
-      <li><b>Virtual Payment Channels (VPC)</b>: Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
-      <li><b>Balance-Aware Routing</b>: Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
+      <li><b>Blockchain Sharding Protocols:</b> Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
+      <li><b>Virtual Payment Channels (VPC):</b> Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
+      <li><b>Balance-Aware Routing:</b> Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
     </ul>
 
+    <!-- Honors -->
     <h2>Honors & Awards</h2>
     <ul>
       <li>Graduate Completion Fellowship, Colorado School of Mines (2025)</li>
