@@ -87,8 +87,8 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 18px 30px;  /* tighter padding */
-      margin-bottom: 18px; /* reduced spacing between boxes */
+      padding: 18px 30px;
+      margin-bottom: 18px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
@@ -103,28 +103,33 @@
       border-bottom: 3px solid #4f9eed;
       padding-bottom: 4px;
       margin-bottom: 10px;
-      font-weight: bold;
+      font-weight: 800;
       text-transform: uppercase;
-      font-size: 26px;
-      color: #222;
+      font-size: 28px;
+      color: #1b1b1b;
       background: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    /* ===== PDF LINK ===== */
-    .pdf-link {
+    /* Parenthesis styling for PDF link inline with title */
+    .title-link {
       display: inline-flex;
       align-items: center;
-      font-weight: bold;
       font-size: 18px;
+      font-weight: normal;
       color: #1d6fd6;
       text-decoration: none;
-      margin-bottom: 12px;
+      margin-left: 4px;
     }
 
-    .pdf-link img {
-      width: 22px;
-      height: 22px;
-      margin-right: 6px;
+    .title-link img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      vertical-align: middle;
     }
 
     /* ===== VIDEO EMBED ===== */
@@ -162,8 +167,15 @@
       background: #558ed2;
     }
 
-    body.dark-mode a {
+    body.dark-mode a,
+    body.dark-mode .title-link {
       color: #64b5f6;
+    }
+
+    /* Dark mode title fix */
+    body.dark-mode h2 {
+      color: #f1f1f1;
+      border-color: #64b5f6;
     }
   </style>
 </head>
@@ -180,13 +192,14 @@
     <h1>Qiushi Wei</h1>
 
     <div class="section-box">
-      <h2>PRESENTATION DEMO</h2>
-      <p>
-        <a class="pdf-link" href="Thor_INFOCOM2024.pdf" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> 
-          Thor Paper (INFOCOM 2024)
-        </a>
-      </p>
+      <h2>
+        PRESENTATION DEMO 
+        <span style="font-weight: normal; font-size: 18px; color: #1d6fd6;">(
+          <a class="title-link" href="Thor_INFOCOM2024.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> Thor Paper INFOCOM 2024
+          </a>
+        )</span>
+      </h2>
 
       <iframe src="https://www.youtube.com/embed/pbUInxl9MLs" 
         title="Thor Protocol Research Demo" frameborder="0" 
