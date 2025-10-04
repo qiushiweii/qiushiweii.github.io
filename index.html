@@ -100,7 +100,14 @@
       font-style: italic;
       margin: 0 0 8px 0;
       color: #333;
+      transition: color 0.3s;
     }
+    
+    /* 🔹 Make it readable in dark mode */
+    body.dark-mode .intro-text h3 {
+      color: #ccc; /* or #ddd for slightly brighter text */
+    }
+
 
     .links {
       display: flex;
