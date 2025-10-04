@@ -291,8 +291,41 @@
         <li><b>12/2023:</b> Our paper on <i>virtual payment channel networks</i> has been accepted by <i>IEEE INFOCOM 2024</i>.</li>
         <li><b>05/2024:</b> I have successfully passed my Ph.D. qualifying exam!</li>
       </ul>
-      <button id="toggle-news" class="news-button">Show More News ▼</button>
+      <div style="text-align:center; margin-top:12px;">
+        <button id="toggle-news" style="
+            background:#4f9eed;
+            color:white;
+            border:none;
+            padding:8px 16px;
+            border-radius:6px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+            transition:background 0.3s, transform 0.2s;
+        ">Display More News</button>
+      </div>
     </div>
+    <script>
+      const newsList = document.getElementById('news-list');
+      const toggleBtn = document.getElementById('toggle-news');
+      const items = Array.from(newsList.getElementsByTagName('li'));
+      let expanded = false;
+    
+      // Show only first 4 by default
+      function updateNewsVisibility() {
+        items.forEach((item, i) => {
+          item.style.display = expanded || i < 4 ? 'list-item' : 'none';
+        });
+        toggleBtn.textContent = expanded ? 'Show Less ↑' : 'Show More ↓';
+      }
+    
+      toggleBtn.addEventListener('click', () => {
+        expanded = !expanded;
+        updateNewsVisibility();
+      });
+    
+      updateNewsVisibility();
+    </script>
 
     <div class="section-box">
       <h2>HIGHLIGHTED RESEARCH PROJECTS</h2>
