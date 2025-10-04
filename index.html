@@ -72,9 +72,9 @@
 
     /* ===== PAGE CONTENT ===== */
     .container {
-      max-width: 1100px;
+      max-width: 1050px;
       margin: 0 auto;
-      padding: 25px 30px;
+      padding: 25px 40px;
     }
 
     .intro {
@@ -82,13 +82,13 @@
       justify-content: flex-start;
       align-items: center;
       margin-bottom: 40px;
-      gap: 60px;
+      gap: 40px;
     }
 
-    /* ✅ Align left text flush with section start */
+    /* ✅ Align text with section start */
     .intro-text {
       flex: 1;
-      margin-left: 10px; /* aligns text with section boxes */
+      margin-left: 5px;
     }
 
     .intro-text h1 {
@@ -130,10 +130,10 @@
       vertical-align: middle;
     }
 
-    /* ✅ Shift portrait left slightly for balance */
+    /* ✅ Slightly shift portrait left */
     .portrait {
       flex: 0 0 180px;
-      margin-right: 20px;
+      margin-left: -10px; /* shifted closer */
     }
 
     .portrait img {
@@ -166,7 +166,9 @@
       color: #222;
       background: none;
       border-radius: 0;
-      text-transform: capitalize; /* ✅ titles use caption case */
+      text-transform: capitalize; /* ✅ caption case titles */
+      font-size: 22px;
+      margin-top: 0;
     }
 
     ul { margin-left: 20px; }
@@ -254,10 +256,8 @@
       <ul>
         <li><b>Designed an optimal virtual payment channel (VPC) construction protocol</b></li>
         <p><i>First author, published at 2024 IEEE INFOCOM</i></p>
-        <p>Traditional payment channel networks (PCNs) rely on intermediaries to route payments between users without direct channels, which limits efficiency and scalability. To overcome this issue, we developed <b>Thor</b>, a recursive VPC construction protocol that introduces the <b>Capacity-to-Number-of-Intermediaries Ratio (CNIR)</b>, a metric that considers both channel capacity and collateral usage.</p>
         <li><b>Designed an innovative rebalancing protocol for PCNs</b></li>
         <p><i>First author, published at 2025 IEEE ICC</i></p>
-        <p>We proposed a distributed balance-aware routing protocol, <b>BAR</b>, that achieves high throughput while accounting for channel balances. By modifying the original HTLC to improve efficiency and adapt it to balance-aware routing, <b>BAR</b> guarantees transaction atomicity.</p>
       </ul>
     </div>
 
