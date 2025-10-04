@@ -148,8 +148,8 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 18px 30px; /* smaller padding */
-      margin-bottom: 18px; /* tighter gap between boxes */
+      padding: 18px 30px;
+      margin-bottom: 18px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
@@ -159,17 +159,24 @@
       box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
     }
 
-    /* Section title styling */
+    /* ===== SECTION TITLE STYLING (UPDATED) ===== */
     h2 {
       border-bottom: 3px solid #4f9eed;
       padding-bottom: 3px;
-      color: #222;
+      color: #1b1b1b;
       background: none;
       border-radius: 0;
       text-transform: uppercase;
-      font-size: 26px;
+      font-size: 28px; /* 🔹 Bigger titles */
+      font-weight: 800;
+      letter-spacing: 0.5px;
       margin-top: 0;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    body.dark-mode h2 {
+      color: #f1f1f1; /* 🔹 Bright text in dark mode */
+      border-color: #64b5f6; /* 🔹 Blue accent consistent */
     }
 
     /* Smaller bullet indent */
