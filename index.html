@@ -39,21 +39,24 @@
     }
     .intro {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 40px;
       margin-bottom: 30px;
     }
     .intro-text {
       flex: 1;
-      text-align: center;
     }
     .intro-text h1 {
-      font-size: 40px;
-      margin-bottom: 15px;
+      font-size: 34px;
+      margin: 0 0 10px;
+    }
+    .intro-text h3 {
+      font-size: 20px;
+      font-style: italic;
+      margin: 0 0 12px;
+      color: #333;
     }
     .intro-text .links {
-      margin-top: 8px;
       font-size: 18px;
     }
     .intro-text .links a {
@@ -63,11 +66,12 @@
       color: #1d6fd6;
     }
     .portrait {
-      flex: 0 0 200px;
+      flex: 0 0 180px;
+      text-align: right;
     }
     .portrait img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
     }
@@ -86,15 +90,16 @@
   </div>
 
   <div class="container">
-    <!-- Intro section with name/links on left, portrait on right -->
+    <!-- Intro section -->
     <div class="intro">
       <div class="intro-text">
         <h1>Qiushi Wei</h1>
+        <h3>Ph.D. Candidate in Computer Science, Colorado School of Mines</h3>
         <div class="links">
-          <a href="Qiushi_CV.pdf" target="_blank">CV</a> |
-          <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+          <a href="mailto:qiushiwei@mines.edu">Email</a> |
           <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
-          <a href="mailto:qiushiwei@mines.edu">Email</a>
+          <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+          <a href="Qiushi_CV.pdf" target="_blank">CV</a>
         </div>
       </div>
       <div class="portrait">
