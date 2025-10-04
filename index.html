@@ -9,11 +9,12 @@
     .navbar { background: #f8f9fa; border-bottom: 2px solid #ddd; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
     .navbar a { background: #4f9eed; color: white; padding: 10px 18px; margin: 0 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background 0.3s; }
     .navbar a:hover { background: #1d6fd6; }
-    h1 { font-size: 34px; margin-bottom: 5px; text-align: center; }
+    h1 { font-size: 34px; margin-bottom: 5px; }
+    .header { display: flex; justify-content: center; align-items: center; gap: 20px; }
+    .header img { width: 160px; border-radius: 8px; }
     .links-below { margin: 12px 0 30px 0; text-align: center; }
     .links-below a { margin: 0 10px; text-decoration: none; font-weight: bold; color: #0366d6; font-size: 18px; }
     h2 { background: #b3d1f7; padding: 8px; border-radius: 5px; }
-    .portrait { float: right; width: 180px; margin: 10px; border-radius: 8px; }
     ul { list-style-type: square; margin-left: 30px; }
   </style>
 </head>
@@ -25,15 +26,17 @@
   </div>
 
   <div class="container">
-    <h1>Qiushi Wei</h1>
+    <div class="header">
+      <h1>Qiushi Wei</h1>
+      <img src="portrait.jpg" alt="Qiushi Wei Portrait">
+    </div>
+
     <div class="links-below">
       <a href="QiushiCV_application.pdf">CV</a> |
       <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
       <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
       <a href="mailto:qiushiwei@mines.edu">Email</a>
     </div>
-
-    <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
 
     <h2>About</h2>
     <p>I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
