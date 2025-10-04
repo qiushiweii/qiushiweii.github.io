@@ -45,7 +45,6 @@
       transform: translateY(-1px);
     }
 
-    /* ✅ Highlight current page */
     .navbar a.active {
       background: #1d6fd6;
       box-shadow: inset 0 -2px 0 0 #003f91;
@@ -81,14 +80,14 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin-bottom: 25px; /* tighter spacing */
-      gap: 40px;
+      margin-bottom: 20px;
+      gap: 35px;
     }
 
-    /* ✅ Align text with section titles */
+    /* Align with section titles */
     .intro-text {
       flex: 1;
-      margin-left: 35px; /* aligns with h2 title start */
+      margin-left: 35px;
     }
 
     .intro-text h1 {
@@ -99,7 +98,7 @@
     .intro-text h3 {
       font-size: 20px;
       font-style: italic;
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       color: #333;
     }
 
@@ -130,15 +129,15 @@
       vertical-align: middle;
     }
 
-    /* ✅ Larger + shifted portrait */
+    /* ✅ Larger portrait + shifted left */
     .portrait {
-      flex: 0 0 200px;
-      margin-left: -30px; /* shifted left */
+      flex: 0 0 215px;
+      margin-left: -70px; /* further left shift */
     }
 
     .portrait img {
-      width: 210px;
-      height: 210px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -149,8 +148,8 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 25px 35px; /* tighter padding */
-      margin-bottom: 25px; /* less gap between sections */
+      padding: 18px 30px; /* smaller padding */
+      margin-bottom: 18px; /* tighter gap between boxes */
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
@@ -160,23 +159,38 @@
       box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
     }
 
-    /* ✅ Section titles uppercase */
+    /* Section title styling */
     h2 {
       border-bottom: 3px solid #4f9eed;
-      padding-bottom: 4px;
+      padding-bottom: 3px;
       color: #222;
       background: none;
       border-radius: 0;
       text-transform: uppercase;
-      font-size: 22px;
+      font-size: 21px;
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    ul { margin-left: 20px; }
-    li { margin-bottom: 2px; }
-    li + p { margin-top: 2px; margin-bottom: 4px; }
-    p { margin-top: 4px; margin-bottom: 6px; }
+    /* Smaller bullet indent */
+    ul {
+      margin-left: 15px;
+      padding-left: 15px;
+    }
+
+    li { 
+      margin-bottom: 2px;
+    }
+
+    li + p {
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+
+    p { 
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
 
     /* ===== DARK MODE ===== */
     body.dark-mode {
@@ -285,7 +299,6 @@
   </div>
 
   <script>
-    // Theme toggle
     const toggleButton = document.getElementById('theme-toggle');
     const body = document.body;
     if (localStorage.getItem('theme') === 'dark') {
