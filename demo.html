@@ -12,17 +12,10 @@
       font-size: 18px; 
       background: #fafafa; 
       color: #000;
-      text-align: center; 
       transition: background 0.3s, color 0.3s;
     }
 
-    .container { 
-      max-width: 1100px; 
-      margin: 0 auto; 
-      padding: 25px; 
-      text-align: left; 
-    }
-
+    /* ===== NAVBAR ===== */
     .navbar { 
       background: #f8f9fa; 
       border-bottom: 2px solid #ddd; 
@@ -42,10 +35,19 @@
       text-decoration: none; 
       font-weight: bold; 
       font-size: 18px; 
-      transition: background 0.3s; 
+      transition: background 0.3s, transform 0.2s; 
     }
 
-    .navbar a:hover { background: #1d6fd6; }
+    .navbar a:hover { 
+      background: #1d6fd6; 
+      transform: translateY(-1px);
+    }
+
+    /* ✅ Active nav button highlight */
+    .navbar a.active {
+      background: #1d6fd6;
+      box-shadow: inset 0 -2px 0 0 #003f91;
+    }
 
     #theme-toggle {
       margin-left: 12px;
@@ -66,26 +68,28 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    h1 { font-size: 34px; margin-bottom: 25px; text-align: center; }
-
-    h2 {
-      border-bottom: 3px solid #4f9eed;
-      padding-bottom: 4px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      background: none;
+    /* ===== CONTENT ===== */
+    .container { 
+      max-width: 1050px;
+      margin: 0 auto; 
+      padding: 25px 40px; 
+      text-align: left; 
     }
 
-    /* Box around section */
+    h1 { 
+      font-size: 34px; 
+      margin-bottom: 20px; 
+      margin-left: 35px; 
+    }
+
+    /* ===== SECTION BOX ===== */
     .section-box {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 30px 35px;
-      margin-bottom: 35px;
+      padding: 18px 30px;  /* tighter padding */
+      margin-bottom: 18px; /* reduced spacing between boxes */
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      text-align: center;
     }
 
     body.dark-mode .section-box {
@@ -94,6 +98,19 @@
       box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
     }
 
+    /* ===== SECTION TITLE ===== */
+    h2 {
+      border-bottom: 3px solid #4f9eed;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 21px;
+      color: #222;
+      background: none;
+    }
+
+    /* ===== PDF LINK ===== */
     .pdf-link {
       display: inline-flex;
       align-items: center;
@@ -101,7 +118,7 @@
       font-size: 18px;
       color: #1d6fd6;
       text-decoration: none;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .pdf-link img {
@@ -110,16 +127,17 @@
       margin-right: 6px;
     }
 
+    /* ===== VIDEO EMBED ===== */
     iframe { 
       display: block; 
-      margin: 20px auto 0; 
+      margin: 15px auto 5px auto; 
       border-radius: 8px; 
       width: 960px; 
       height: 540px; 
       max-width: 100%;
     }
 
-    /* 🌙 Dark Mode */
+    /* ===== DARK MODE ===== */
     body.dark-mode {
       background: #121212;
       color: #e0e0e0;
@@ -133,6 +151,11 @@
     body.dark-mode .navbar a {
       background: #3a6ea5;
       color: white;
+    }
+
+    body.dark-mode .navbar a.active {
+      background: #64b5f6;
+      color: #000;
     }
 
     body.dark-mode .navbar a:hover {
@@ -149,7 +172,7 @@
     <a href="index.html">Home</a>
     <a href="publications.html">Publications</a>
     <a href="teaching.html">Teaching</a>
-    <a href="demo.html">Presentation Demo</a>
+    <a href="demo.html" class="active">Presentation Demo</a>
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
 
@@ -157,7 +180,7 @@
     <h1>Qiushi Wei</h1>
 
     <div class="section-box">
-      <h2>Presentation Demo</h2>
+      <h2>PRESENTATION DEMO</h2>
       <p>
         <a class="pdf-link" href="Thor_INFOCOM2024.pdf" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> 
