@@ -78,10 +78,10 @@
 
     .intro {
       display: flex;
-      justify-content: flex-start;
       align-items: center;
       margin-bottom: 20px;
-      gap: 35px;
+      gap: 20px; /* slightly smaller gap */
+      max-width: 900px; /* 🔹 limits total width of intro so image aligns with text body */
     }
 
     /* Align with section titles */
@@ -131,8 +131,8 @@
 
     /* ✅ Larger portrait + shifted left */
     .portrait {
-      flex: 0 0 215px;
-      margin-left: -120px; /* further left shift */
+      flex: 0 0 200px;
+      margin-left: -40px; /* further left shift */
     }
 
     .portrait img {
