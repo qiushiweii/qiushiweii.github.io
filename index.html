@@ -279,8 +279,20 @@
       <ul>
         <li><b>Designed an optimal virtual payment channel (VPC) construction protocol</b></li>
         <p><i>First author, published at 2024 IEEE INFOCOM</i></p>
+        <p>
+          Traditional payment channel networks (PCNs) rely on intermediaries to route payments between users without direct channels, which limits efficiency and scalability.
+          To overcome this issue, we developed <b>Thor</b>, a recursive VPC construction protocol that introduces the <b>Capacity-to-Number-of-Intermediaries Ratio (CNIR)</b>, a metric that considers both channel capacity and collateral usage.
+          By leveraging a game-theoretic optimization algorithm, <b>Thor</b> efficiently constructs VPC networks and significantly outperforms state-of-the-art methods in terms of both capacity and CNIR.
+        </p>
+
         <li><b>Designed an innovative rebalancing protocol for PCNs</b></li>
         <p><i>First author, published at 2025 IEEE ICC</i></p>
+        <p>
+          PCNs improve blockchain scalability through off-chain transactions but suffer from balance depletion due to unidirectional payments.
+          We proposed a distributed balance-aware routing protocol, <b>BAR</b>, that achieves high throughput while accounting for channel balances.
+          By modifying the original HTLC to improve efficiency and adapt it to balance-aware routing, <b>BAR</b> guarantees transaction atomicity.
+          We used real banking transaction data to evaluate <b>BAR</b> and demonstrated that it achieves a nearly 100% success ratio and success volume, highlighting its effectiveness.
+        </p>
       </ul>
     </div>
 
