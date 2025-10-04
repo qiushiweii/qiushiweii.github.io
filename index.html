@@ -6,12 +6,19 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
       font-size: 18px;
+      text-align: center;
+      background-color: #fafafa;
     }
-
-    /* Navigation bar */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+    }
     .navbar {
       background-color: #f8f9fa;
       border-bottom: 2px solid #ddd;
@@ -25,79 +32,88 @@
       background-color: #4f9eed;
       color: white;
       padding: 10px 18px;
-      margin: 0 8px;
+      margin: 0 6px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
       transition: background 0.3s;
     }
-    .navbar a:hover {
-      background-color: #1d6fd6;
+    .navbar a:hover { background-color: #1d6fd6; }
+    h1 {
+      font-size: 34px;
+      margin-bottom: 5px;
     }
-
+    .links-below {
+      margin: 12px 0 30px 0;
+    }
+    .links-below a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0366d6;
+      font-size: 18px;
+    }
     h2 {
       background-color: #b3d1f7;
       padding: 8px;
       border-radius: 5px;
     }
-
     .portrait {
       float: right;
       width: 180px;
       margin: 10px;
       border-radius: 8px;
     }
-
-    ul {
-      list-style-type: square;
-    }
+    ul { list-style-type: square; margin-left: 30px; }
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
   <div class="navbar">
     <a href="index.html">Home</a>
     <a href="publications.html">Publications</a>
     <a href="teaching.html">Teaching</a>
-    <a href="QiushiCV_application.pdf">CV</a>
-    <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a href="mailto:qiushiwei@mines.edu">Email</a>
   </div>
 
-  <h1>Qiushi Wei</h1>
-  <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
+  <div class="container">
+    <h1>Qiushi Wei</h1>
+    <div class="links-below">
+      <a href="QiushiCV_application.pdf">CV</a> |
+      <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
+      <a href="mailto:qiushiwei@mines.edu">Email</a>
+    </div>
 
-  <h2>Summary</h2>
-  <p>
-    I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
-    My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity. 
-    I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty position starting in 2026.
-  </p>
+    <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
 
-  <h2>Education</h2>
-  <ul>
-    <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
-    <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
-    <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
-    <li><b>B.S. in Chemistry</b>, Hubei University, 2011–2015</li>
-  </ul>
+    <h2>About</h2>
+    <p>
+      I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
+      My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity. 
+      I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty position starting in 2026.
+    </p>
 
-  <h2>Highlighted Projects</h2>
-  <ul>
-    <li><b>Blockchain Sharding Protocols</b>: Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
-    <li><b>Virtual Payment Channels (VPC)</b>: Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
-    <li><b>Balance-Aware Routing</b>: Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
-  </ul>
+    <h2>Education</h2>
+    <ul>
+      <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
+      <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
+      <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
+      <li><b>B.S. in Chemistry</b>, Hubei University, 2011–2015</li>
+    </ul>
 
-  <h2>Honors & Awards</h2>
-  <ul>
-    <li>Graduate Completion Fellowship, Colorado School of Mines (2025)</li>
-    <li>Best Paper Nomination, IEEE INFOCOM (2024)</li>
-    <li>Outstanding Research Award, Colorado School of Mines (2023)</li>
-  </ul>
+    <h2>Research Experiences</h2>
+    <ul>
+      <li><b>Blockchain Sharding Protocols</b>: Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
+      <li><b>Virtual Payment Channels (VPC)</b>: Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
+      <li><b>Balance-Aware Routing</b>: Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
+    </ul>
 
+    <h2>Honors & Awards</h2>
+    <ul>
+      <li>Graduate Completion Fellowship, Colorado School of Mines (2025)</li>
+      <li>Best Paper Nomination, IEEE INFOCOM (2024)</li>
+      <li>Outstanding Research Award, Colorado School of Mines (2023)</li>
+    </ul>
+  </div>
 </body>
 </html>
