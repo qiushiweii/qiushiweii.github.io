@@ -15,23 +15,30 @@
       color: #222;
     }
     header {
-      text-align: center;
-      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 2px solid #ddd;
+      padding: 20px 0;
+    }
+    header div {
+      max-width: 70%;
     }
     h1 { margin-bottom: 5px; }
-    nav { margin-top: 10px; }
     nav a {
       margin: 0 12px;
       text-decoration: none;
       color: #0366d6;
       font-weight: bold;
     }
-    section { margin: 40px 0; }
+    section {
+      margin: 40px 0;
+    }
     h2 {
-      color: #444;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
+      background-color: #0366d6;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
     }
     ul { margin-top: 10px; }
     .contact a { color: #0366d6; text-decoration: none; }
@@ -40,21 +47,22 @@
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Portrait goes here -->
+    <div>
+      <h1>Qiushi Wei</h1>
+      <p>Ph.D. Candidate in Computer Science, Colorado School of Mines</p>
+      <nav>
+        <a href="QiushiCV_application.pdf">CV</a>
+        <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      </nav>
+    </div>
     <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
-    <h1>Qiushi Wei</h1>
-    <p>Ph.D. Candidate in Computer Science, Colorado School of Mines</p>
-    <nav>
-      <a href="QiushiCV_application.pdf">CV</a>
-      <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    </nav>
   </header>
 
   <section>
@@ -88,12 +96,24 @@
   <section>
     <h2>Publications (Selected)</h2>
     <ul>
-      <li><b>Thor:</b> A Virtual Payment Channel Network Construction Protocol – IEEE INFOCOM 2024</li>
-      <li><b>BAR:</b> A Balance-Aware Routing Protocol in Payment Channel Networks – IEEE ICC 2025</li>
-      <li><b>ShardTree:</b> Efficient Cross-Shard Transactions via Multi-party Virtual Payment Channels – Submitted, INFOCOM 2026</li>
-      <li><b>ShardBridge:</b> Enabling Efficient Cross-Shard Transactions via Payment Channels – Submitted, INFOCOM 2026</li>
-      <li><b>Learning Robust Simplex Sparse Representation</b> – IEEE ICMLA 2025</li>
-      <li><b>Space Booking:</b> Broadband Satellite Networks – IEEE ICDCS 2025</li>
+      <li><b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue.  
+        <i>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</i>. IEEE INFOCOM, 2024.
+      </li>
+      <li><b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue.  
+        <i>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</i>. IEEE ICC, 2025.
+      </li>
+      <li><b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue.  
+        <i>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</i>. Submitted to IEEE INFOCOM, 2026.
+      </li>
+      <li><b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue.  
+        <i>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</i>. Submitted to IEEE INFOCOM, 2026.
+      </li>
+      <li>Zhennan Shi, <b>Qiushi Wei</b>.  
+        <i>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</i>. IEEE ICMLA, 2025.
+      </li>
+      <li>Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li.  
+        <i>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</i>. IEEE ICDCS, 2025.
+      </li>
     </ul>
     <p>Full list available on <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
   </section>
