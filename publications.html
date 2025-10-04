@@ -37,20 +37,18 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
-      text-align: center; /* center the block */
+      text-align: center;
     }
-    h1 {
-      margin-bottom: 10px;
-    }
+    h1 { margin-bottom: 10px; }
     h2 {
       background: #b3d1f7;
       padding: 8px;
       border-radius: 5px;
-      text-align: left; /* heading itself stays left-aligned */
+      text-align: left;
     }
     .pub-list {
-      display: inline-block;   /* center as a block */
-      text-align: left;        /* but align its content to the left */
+      display: inline-block;
+      text-align: left;
       max-width: 850px;
     }
     .pub-list ul {
@@ -74,6 +72,33 @@
       height: 18px;
       margin-right: 6px;
     }
+    .sort-buttons {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .sort-buttons button {
+      background: #4f9eed;
+      color: white;
+      padding: 8px 16px;
+      margin: 0 8px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .sort-buttons button:hover {
+      background: #1d6fd6;
+    }
+    .full-pubs {
+      margin-top: 40px;
+      font-size: 18px;
+    }
+    .full-pubs a {
+      color: #1d6fd6;
+      font-weight: bold;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -87,45 +112,50 @@
     <h1>Qiushi Wei</h1>
     <h2>Selected Publications</h2>
 
+    <div class="sort-buttons">
+      <button onclick="sortPubs('desc')">Sort by Year ↓</button>
+      <button onclick="sortPubs('asc')">Sort by Year ↑</button>
+    </div>
+
     <div class="pub-list">
-      <ul>
-        <li>
+      <ul id="pubs">
+        <li data-year="2024">
           <i>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</i><br>
           <b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE INFOCOM, 2024.<br>
           <a class="pdf-link" href="Thor_INFOCOM2024.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
           </a>
         </li>
-        <li>
+        <li data-year="2025">
           <i>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</i><br>
           <b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE ICC, 2025.<br>
           <a class="pdf-link" href="BAR_ICC2025.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
           </a>
         </li>
-        <li>
+        <li data-year="2026">
           <i>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</i><br>
           <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.<br>
           <a class="pdf-link" href="ShardTree.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
           </a>
         </li>
-        <li>
+        <li data-year="2026">
           <i>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</i><br>
           <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.<br>
           <a class="pdf-link" href="ShardBridge.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
           </a>
         </li>
-        <li>
-           <i>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</i><br>
+        <li data-year="2025">
+          <i>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</i><br>
           Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE ICDCS, 2025.<br>
           <a class="pdf-link" href="SpaceBooking_ICDCS2025.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
           </a>
         </li>
-        <li>
-           <i>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</i><br>
+        <li data-year="2025">
+          <i>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</i><br>
           Zhennan Shi, <b>Qiushi Wei</b>. IEEE ICMLA, 2025.<br>
           <a class="pdf-link" href="RSSR_ICMLA2025.pdf" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
@@ -133,6 +163,30 @@
         </li>
       </ul>
     </div>
+
+    <div class="full-pubs">
+      <h2>Full Publications</h2>
+      <p>See the full list on 
+        <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">
+          Google Scholar
+        </a>.
+      </p>
+    </div>
   </div>
+
+  <script>
+    function sortPubs(order) {
+      const list = document.getElementById("pubs");
+      const items = Array.from(list.getElementsByTagName("li"));
+
+      items.sort((a, b) => {
+        const yearA = parseInt(a.getAttribute("data-year"));
+        const yearB = parseInt(b.getAttribute("data-year"));
+        return order === "asc" ? yearA - yearB : yearB - yearA;
+      });
+
+      items.forEach(item => list.appendChild(item));
+    }
+  </script>
 </body>
 </html>
