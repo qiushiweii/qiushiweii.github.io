@@ -4,17 +4,76 @@
   <meta charset="UTF-8">
   <title>Qiushi Wei | Publications</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; font-size: 18px; background: #fafafa; text-align: center; }
-    .container { max-width: 900px; margin: 0 auto; padding: 20px; text-align: left; }
-    .navbar { background: #f8f9fa; border-bottom: 2px solid #ddd; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-    .navbar a { background: #4f9eed; color: white; padding: 10px 18px; margin: 0 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background 0.3s; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      font-size: 18px;
+      background: #fafafa;
+    }
+    .navbar {
+      background: #f8f9fa;
+      border-bottom: 2px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      background: #4f9eed;
+      color: white;
+      padding: 10px 18px;
+      margin: 0 6px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
     .navbar a:hover { background: #1d6fd6; }
-    h1 { font-size: 34px; margin-bottom: 25px; text-align: center; }
-    h2 { background: #b3d1f7; padding: 8px; border-radius: 5px; }
-    li { margin-bottom: 25px; }
-    .title { font-style: italic; display: block; margin-bottom: 5px; }
-    .authors { margin-left: 20px; margin-bottom: 5px; }
-    .pdf-link { margin-left: 20px; font-size: 16px; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center; /* center the block */
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    h2 {
+      background: #b3d1f7;
+      padding: 8px;
+      border-radius: 5px;
+      text-align: left; /* heading itself stays left-aligned */
+    }
+    .pub-list {
+      display: inline-block;   /* center as a block */
+      text-align: left;        /* but align its content to the left */
+      max-width: 850px;
+    }
+    .pub-list ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      padding-left: 15px;
+    }
+    .pub-list li {
+      margin-bottom: 20px;
+    }
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1d6fd6;
+    }
+    .pdf-link img {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+    }
   </style>
 </head>
 <body>
@@ -26,45 +85,54 @@
 
   <div class="container">
     <h1>Qiushi Wei</h1>
-
     <h2>Selected Publications</h2>
-    <ul>
-      <li>
-        <span class="title">Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</span>
-        <div class="authors"><b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE INFOCOM, 2024.</div>
-        <a class="pdf-link" href="papers/thor.pdf" target="_blank">[PDF]</a>
-      </li>
 
-      <li>
-        <span class="title">BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</span>
-        <div class="authors"><b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE ICC, 2025.</div>
-        <a class="pdf-link" href="papers/bar.pdf" target="_blank">[PDF]</a>
-      </li>
-
-      <li>
-        <span class="title">ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</span>
-        <div class="authors"><b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.</div>
-        <a class="pdf-link" href="papers/shardtree.pdf" target="_blank">[PDF]</a>
-      </li>
-
-      <li>
-        <span class="title">ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</span>
-        <div class="authors"><b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.</div>
-        <a class="pdf-link" href="papers/shardbridge.pdf" target="_blank">[PDF]</a>
-      </li>
-
-      <li>
-        <span class="title">Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</span>
-        <div class="authors">Zhennan Shi, <b>Qiushi Wei</b>. IEEE ICMLA, 2025.</div>
-        <a class="pdf-link" href="papers/robust_simplex.pdf" target="_blank">[PDF]</a>
-      </li>
-
-      <li>
-        <span class="title">Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</span>
-        <div class="authors">Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE ICDCS, 2025.</div>
-        <a class="pdf-link" href="papers/space_booking.pdf" target="_blank">[PDF]</a>
-      </li>
-    </ul>
+    <div class="pub-list">
+      <ul>
+        <li>
+          <i>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</i><br>
+          <b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE INFOCOM, 2024.<br>
+          <a class="pdf-link" href="thor.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+        <li>
+          <i>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</i><br>
+          <b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE ICC, 2025.<br>
+          <a class="pdf-link" href="bar.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+        <li>
+          <i>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</i><br>
+          <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.<br>
+          <a class="pdf-link" href="shardtree.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+        <li>
+          <i>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</i><br>
+          <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.<br>
+          <a class="pdf-link" href="shardbridge.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+        <li>
+           <i>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</i><br>
+          Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE ICDCS, 2025.<br>
+          <a class="pdf-link" href="icdcs.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+        <li>
+           <i>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</i><br>
+          Zhennan Shi, <b>Qiushi Wei</b>. IEEE ICMLA, 2025.<br>
+          <a class="pdf-link" href="icmla.pdf" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF"> PDF
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
