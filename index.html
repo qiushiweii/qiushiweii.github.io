@@ -2,161 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Qiushi Wei – Academic Homepage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qiushi Wei | Homepage</title>
   <style>
     body {
-      font-family: "Helvetica", "Arial", sans-serif;
-      margin: 0 auto;
-      max-width: 1000px;
-      padding: 20px;
-      line-height: 1.8;
-      background: #fafafa;
-      color: #222;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
       font-size: 18px;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    /* Navigation bar */
+    .navbar {
+      background-color: #f8f9fa;
       border-bottom: 2px solid #ddd;
-      padding: 20px 0;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    header div {
-      max-width: 70%;
-    }
-    h1 {
-      margin-bottom: 5px;
-      font-size: 32px;
-    }
-    nav a {
+    .navbar a {
+      background-color: #4f9eed;
+      color: white;
+      padding: 10px 18px;
       margin: 0 8px;
+      border-radius: 6px;
       text-decoration: none;
-      color: #0366d6;
       font-weight: bold;
       font-size: 18px;
+      transition: background 0.3s;
     }
-    section {
-      margin: 40px 0;
+    .navbar a:hover {
+      background-color: #1d6fd6;
     }
+
     h2 {
-      background-color: #4f9eed; /* lighter blue */
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 22px;
+      background-color: #b3d1f7;
+      padding: 8px;
+      border-radius: 5px;
     }
-    ul {
-      margin-top: 10px;
-    }
-    li {
-      margin-bottom: 12px;
-    }
-    .contact a {
-      color: #0366d6;
-      text-decoration: none;
-    }
+
     .portrait {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-left: 20px;
+      float: right;
+      width: 180px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    ul {
+      list-style-type: square;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>Qiushi Wei</h1>
-      <p>Ph.D. Candidate in Computer Science, Colorado School of Mines</p>
-      <nav>
-        <a href="QiushiCV_application.pdf">CV</a> |
-        <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a> |
-        <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>
-      </nav>
-    </div>
-    <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
-  </header>
 
-  <section>
-    <h2>Summary</h2>
-    <p>
-      I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025.
-      My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity.
-      I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty position starting in 2026.
-    </p>
-  </section>
+  <!-- Navigation -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="QiushiCV_application.pdf">CV</a>
+    <a href="https://www.linkedin.com/in/qiushi-wei-77b24623b/" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a href="mailto:qiushiwei@mines.edu">Email</a>
+  </div>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
-      <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
-      <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
-      <li><b>B.S. in Chemistry</b>, Hubei University, 2011–2015</li>
-    </ul>
-  </section>
+  <h1>Qiushi Wei</h1>
+  <img src="portrait.jpg" alt="Qiushi Wei Portrait" class="portrait">
 
-  <section>
-    <h2>Research Experiences</h2>
-    <ul>
-      <li><b>Blockchain Sharding Protocols:</b> Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
-      <li><b>Virtual Payment Channels (VPC):</b> Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
-      <li><b>Balance-Aware Routing:</b> Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
-    </ul>
-  </section>
+  <h2>Summary</h2>
+  <p>
+    I am a Ph.D. candidate in Computer Science at Colorado School of Mines, expecting to graduate in December 2025. 
+    My research focuses on networking, blockchain, payment channel networks, sharding, distributed systems, and cybersecurity. 
+    I have published in top venues such as INFOCOM, ICDCS, ICC, and ICMLA, and I am actively seeking a tenure-track faculty position starting in 2026.
+  </p>
 
-  <section>
-    <h2>Publications (Selected)</h2>
-    <ul>
-      <li><i>Thor: A Virtual Payment Channel Network Construction Protocol over Cryptocurrencies</i>.  
-        <b>Qiushi Wei</b>, Dejun Yang, Ruozhou Yu, Guoliang Xue. IEEE INFOCOM, 2024.
-      </li>
-      <li><i>BAR: A Balance-Aware Routing Protocol in Payment Channel Networks</i>.  
-        <b>Qiushi Wei</b>, Yuhui Zhang, Dejun Yang, Guoliang Xue. IEEE ICC, 2025.
-      </li>
-      <li><i>ShardTree: An Efficient Cross-Shard Protocol through Multi-party Virtual Payment Channels</i>.  
-        <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.
-      </li>
-      <li><i>ShardBridge: Enabling Efficient Cross-Shard Transactions via Payment Channels</i>.  
-        <b>Qiushi Wei</b>, Ruozhou Yu, Xiaojian Wang, Dejun Yang, Guoliang Xue. Submitted to IEEE INFOCOM, 2026.
-      </li>
-      <li><i>Learning Robust Simplex Sparse Representation Using Alternating Linearized Minimization Method</i>.  
-        Zhennan Shi, <b>Qiushi Wei</b>. IEEE ICMLA, 2025.
-      </li>
-      <li><i>Space Booking: Enabling Performance-Critical Applications in Broadband Satellite Networks</i>.  
-        Xiaojian Wang, Ruozhou Yu, Dejun Yang, Guoliang Xue, <b>Qiushi Wei</b>, Huayue Gu, Zhouyu Li. IEEE ICDCS, 2025.
-      </li>
-    </ul>
-    <p>Full list available on <a href="https://scholar.google.com/citations?user=pnaTPhkAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
-  </section>
+  <h2>Education</h2>
+  <ul>
+    <li><b>Ph.D. in Computer Science</b>, Colorado School of Mines, 2021–present</li>
+    <li><b>M.S. in Applied Chemistry</b>, Colorado School of Mines, 2018–2021</li>
+    <li><b>M.S. in Chemistry and Physics of Polymers</b>, South China University of Technology, 2015–2018</li>
+    <li><b>B.S. in Chemistry</b>, Hubei University, 2011–2015</li>
+  </ul>
 
-  <section>
-    <h2>Teaching</h2>
-    <ul>
-      <li>CSCI 358: Discrete Math – Fall 2022, Spring 2023</li>
-      <li>CHGN 121: General Chemistry Lab – Fall 2018, Spring 2019</li>
-      <li>CHGN 122: Physical Chemistry Lab – Fall 2019</li>
-    </ul>
-  </section>
+  <h2>Research Experiences</h2>
+  <ul>
+    <li><b>Blockchain Sharding Protocols</b>: Designed cross-shard transaction protocols using payment channels and threshold signatures.</li>
+    <li><b>Virtual Payment Channels (VPC)</b>: Developed optimization algorithms and recursive VPC construction with game-theory guarantees.</li>
+    <li><b>Balance-Aware Routing</b>: Invented BAR protocol for efficient routing in payment channel networks with atomicity guarantees.</li>
+  </ul>
 
-  <section>
-    <h2>Honors & Awards</h2>
-    <ul>
-      <li>INFOCOM Student Travel Grant – 2022, 2024</li>
-      <li>ICNP Student Travel Grant – 2022</li>
-      <li>Excellent Graduate Student Scholarship, South China Univ. of Tech. – 2015–2018</li>
-      <li>Excellent Student Scholarship, Hubei University – 2012</li>
-    </ul>
-  </section>
+  <h2>Honors & Awards</h2>
+  <ul>
+    <li>Graduate Completion Fellowship, Colorado School of Mines (2025)</li>
+    <li>Best Paper Nomination, IEEE INFOCOM (2024)</li>
+    <li>Outstanding Research Award, Colorado School of Mines (2023)</li>
+  </ul>
 
-  <section>
-    <h2>Contact</h2>
-    <p class="contact">
-      📧 <a href="mailto:qiushiwei@mines.edu">qiushiwei@mines.edu</a><br>
-      📍 Colorado School of Mines, Golden, CO
-    </p>
-  </section>
 </body>
 </html>
