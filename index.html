@@ -40,11 +40,12 @@
     .intro {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start; /* align text with top of image */
       margin-bottom: 30px;
     }
     .intro-text {
       flex: 1;
+      padding-top: 5px; /* nudge text down for visual balance */
     }
     .intro-text h1 {
       font-size: 34px;
@@ -67,7 +68,8 @@
     }
     .portrait {
       flex: 0 0 180px;
-      text-align: right;
+      display: flex;
+      justify-content: flex-end;
     }
     .portrait img {
       width: 180px;
@@ -169,7 +171,7 @@
     </ul>
 
     <!-- Honors -->
-    <h2>Honors & Awards</h2>
+    <h2>Additional Honors & Awards</h2>
     <ul>
       <li>Graduate Completion Fellowship, Colorado School of Mines (2025)</li>
       <li>Best Paper Nomination, IEEE INFOCOM (2024)</li>
