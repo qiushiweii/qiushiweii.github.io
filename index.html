@@ -389,5 +389,17 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
   </script>
+  
+  <footer class="footer">
+  <p id="last-updated"></p>
+  </footer>
+  <script>
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long' };
+    document.getElementById('last-updated').textContent =
+      '📘 Last updated: ' + date.toLocaleDateString('en-US', options);
+  </script>
+
+
 </body>
 </html>
